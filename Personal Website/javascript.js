@@ -1,5 +1,5 @@
 const textElement = document.getElementById('text');
-const speed = 4; // adjust speed here
+const speed = 5; // adjust speed here
 
 let textWidth = textElement.offsetWidth;
 let containerWidth = document.querySelector('.scroll-container').offsetWidth;
@@ -21,21 +21,6 @@ function scrollText() {
         textElement.style.transform = `translateX(${transform}px)`;
     }
 
-    // check again in 10ms
-    setTimeout(function () {
-        if (isScrolling) {
-            scrollText();
-        }
-    }, 10);
+    // immediately call the function again
+    requestAnimationFrame(scrollText);
 }
-
-// stop scrolling when mouse is over text
-textElement.addEventListener('mouseover', function () {
-    isScrolling = false;
-});
-
-// start scrolling again when mouse leaves text
-textElement.addEventListener('mouseleave', function () {
-    isScrolling = true;
-    scrollText();
-});

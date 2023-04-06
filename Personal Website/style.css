@@ -1,12 +1,14 @@
+/* Set the background image for the page and style the body */
 body {
     background-image: url("https://wallpapercave.com/wp/wp6942344.jpg");
     background-size: cover;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    overflow: hidden;
+    overflow: hidden; /* hide any content that overflows the body */
 }
 
+/* Style the header, which takes up the full height of the viewport */
 .header {
     height: 100vh;
     display: flex;
@@ -15,25 +17,29 @@ body {
     align-items: center;
 }
 
+/* Style the header's title */
 .header h1 {
     font-size: 4rem;
     margin: 0;
 }
 
+/* Create a scrolling text container */
 .scroll-container {
     height: 50px;
     overflow: hidden;
     position: relative;
 }
 
+/* Style the text element inside the container */
 .scroll-text {
     display: inline-block;
     left: 100%;
     top: 0;
     white-space: nowrap;
-    animation: scroll 10s linear infinite;
+    animation: scroll 10s linear infinite; /* apply the scroll animation */
 }
 
+/* Style the text inside the scrolling text container */
 .scroll-text p {
     color: #000000;
     font-size: 1.5rem;
@@ -41,28 +47,31 @@ body {
     padding: 10px;
 }
 
+/* Define the scroll animation */
 @keyframes scroll {
     0% {
-        transform: translateX(100%);
+        transform: translateX(100%); /* start offscreen to the right */
     }
 
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-100%); /* move offscreen to the left */
     }
 }
 
+/* Style the navbar */
 .navbar {
     background-color: #333;
     height: 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    position: fixed;
+    position: fixed; /* fix the navbar to the viewport */
     bottom: 0;
     left: 0;
     right: 0;
 }
 
+/* Style the links inside the navbar */
 .navbar a {
     color: #fff;
     text-decoration: none;

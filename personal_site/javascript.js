@@ -24,4 +24,3 @@ function scrollText() {
     // immediately call the function again
     requestAnimationFrame(scrollText);
 }
-

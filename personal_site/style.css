@@ -1,0 +1,156 @@
+/* Set the background image for the page and style the body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    /* hide any content that overflows the body */
+
+    /* Another way of displaying background:
+    background-image: url("https://www.gamekyo.com/images_1/4125e4d0025f7265e2248b2c6d5ae9b820220525104114.jpg");
+    background-attachment: fixed;
+    background-size: cover; */
+    
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url("https://www.gamekyo.com/images_1/4125e4d0025f7265e2248b2c6d5ae9b820220525104114.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* Style the header, which takes up the full height of the viewport */
+.header {
+    height: 80vh;
+    background-image: conic-gradient(#4d42b1, #ee4b2b, #00c2cb);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style the header's title */
+.header h1 {
+    font-size: 5rem;
+    margin: 0;
+}
+
+.about-header {
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+/* Create a scrolling text container */
+.scroll-container {
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 50px;
+    /* add a margin-top to move the container below the navbar */
+}
+
+/* Style the text element inside the container */
+.scroll-text {
+    display: inline-block;
+    left: 100%;
+    top: 0;
+    white-space: nowrap;
+    animation: scroll 10s linear infinite;
+    /* apply the scroll animation */
+}
+
+/* Style the text inside the scrolling text container */
+.scroll-text p {
+    color: #000000;
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 10px;
+}
+
+/* Define the scroll animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+        /* start offscreen to the right */
+    }
+
+    100% {
+        transform: translateX(-100%);
+        /* move offscreen to the left */
+    }
+}
+
+/* Style the navbar */
+.navbar {
+    background-color: #153441;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    /* fix the navbar to the viewport */
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.8;
+    /* set the opacity to 80% */
+}
+
+/* Style the links inside the navbar */
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+    /* add this line to make the text bold */
+}
+
+/* Highlighting Links */
+.navbar a {
+    box-shadow: inset 0 0 0 0 #54b3d6;
+    color: #54b3d6;
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+/* Defines styles for navbar anchor tags*/
+.navbar a:hover {
+    box-shadow: inset 100px 0 0 0 #54b3d6;
+    color: white;
+}
+
+/* Container styling */
+.container {
+    max-width: 800px;
+    height: 700px;
+    margin: 0 auto;
+    padding: 1rem;
+    border: 2px solid #333;
+    background-color: rgba(255, 255, 255, 0.582);
+}
+
+/* Paragraph styling */
+.container p {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}

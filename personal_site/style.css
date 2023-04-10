@@ -10,9 +10,10 @@ body {
     background-image: url("https://www.gamekyo.com/images_1/4125e4d0025f7265e2248b2c6d5ae9b820220525104114.jpg");
     background-attachment: fixed;
     background-size: cover; */
-    
+
 }
 
+/* Applies background image to the entire viewport and positions it centered */
 .background {
     position: fixed;
     top: 0;
@@ -45,6 +46,7 @@ body {
     margin: 0;
 }
 
+/* Styling for the header section of the about page */
 .about-header {
     height: 700px;
     display: flex;
@@ -53,9 +55,19 @@ body {
     align-items: center;
 }
 
+/* Styling for the h1 element inside the .about-header section */
 .about-header h1 {
     font-size: 3rem;
     margin: 0;
+}
+
+/* Styling for the header section of the contact page */
+.contact-header {
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Create a scrolling text container */
@@ -153,4 +165,88 @@ body {
     max-width: 600px;
     margin: 0 auto;
     padding: 1.5rem;
+}
+
+form {
+    /* Set the display to flex and the direction to column to stack the elements vertically */
+    display: flex;
+    flex-direction: column;
+    /* Center the elements horizontally */
+    align-items: center;
+}
+
+label {
+    /* Add some margin around the labels */
+    margin: 10px;
+}
+
+/* Style the text and email inputs */
+input[type="text"],
+input[type="email"] {
+    /* Set the width to 100% and the max width to 400px */
+    width: 100%;
+    max-width: 400px;
+    /* Add padding and margin */
+    padding: 10px;
+    margin: 10px;
+    /* Set the font size */
+    font-size: 16px;
+    /* Add some border radius and a box shadow */
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Style the textarea */
+textarea {
+    /* Set the width to 100% and the max width to 400px */
+    width: 100%;
+    max-width: 400px;
+    /* Set the height to 150px */
+    height: 150px;
+    /* Add padding and margin */
+    padding: 10px;
+    margin: 10px;
+    /* Set the font size */
+    font-size: 16px;
+    /* Add some border radius and a box shadow */
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+button {
+    /* Center the button horizontally */
+    margin: 20px auto;
+    /* Add padding */
+    padding: 10px 20px;
+    /* Set the font size and weight */
+    font-size: 20px;
+    font-weight: bold;
+    /* Set the background color to blue */
+    background-color: #0077b6;
+    /* Set the text color to white */
+    color: white;
+    /* Remove the border */
+    border: none;
+    /* Add some border radius and a box shadow */
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    /* Change the cursor to a pointer */
+    cursor: pointer;
+}
+
+/* Style the button on hover */
+button:hover {
+    /* Change the background color on hover */
+    background-color: #023e8a;
+}
+
+@media screen and (min-width: 600px) {
+
+    /* Set the form width to 50% and center it horizontally */
+    form {
+        width: 50%;
+        margin: auto;
+    }
 }
